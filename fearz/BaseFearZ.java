@@ -59,7 +59,7 @@ public class BaseFearZ {
 	public static Item Knife = (new ItemSword(4016, KnifeMat)).setUnlocalizedName("Knife").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:Knife");
 	public static Item StonyMass = (new ItemSword(4017, StonyMassMat)).setUnlocalizedName("StonyMass").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:StonyMass");
 	public static Item CrossBow = (new ItemBow(4018)).setUnlocalizedName("CrossBow").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:CrossBow");
-	
+	public static Item MilkBucket;
 	
 	
 	@EventHandler 
@@ -94,6 +94,10 @@ public class BaseFearZ {
     @EventHandler 
     public void load(FMLInitializationEvent event) 
     { 
+    	Item.itemsList[Item.bucketMilk.itemID] = null;
+    	   MilkBucket = new MilkBucket(79).setUnlocalizedName("milk").setContainerItem(Item.bucketEmpty).setTextureName("bucket_milk");
+    	   GameRegistry.registerItem(MilkBucket, "Milk");
+    	   Item.itemsList[Item.bucketMilk.itemID] = MilkBucket;
     	Fracture = (new Fracture(32, false, 0)).setIconIndex(0, 0).setPotionName("Fracture").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2);
     	FractureOuverte = (new Fracture(33, false, 0)).setIconIndex(0, 0).setPotionName("Fracture Ouverte").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2).func_111184_a(SharedMonsterAttributes.maxHealth, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", -6.0D, 0);
     }
