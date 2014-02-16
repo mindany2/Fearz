@@ -30,6 +30,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class BaseFearZ {
 	
 	@Instance("FearZ")
+	public static DamageSource causeArrowDamage(EntityTilesCrossbow par0EntityArrow, Entity par1Entity)
+    {
+        return (new EntityDamageSourceIndirect("tilesCrossbow", par0EntityArrow, par1Entity)).setProjectile();
+    }
 	public static BaseFearZ instance;
 	public static Potion Fracture;
 	public static Potion FractureOuverte;
