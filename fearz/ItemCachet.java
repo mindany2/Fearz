@@ -38,7 +38,7 @@ public class ItemCachet extends Item {
 	        
 	        if (!par2World.isRemote)
 	        {
-	            par3EntityPlayer.curePotionEffects(par1ItemStack);
+	            par3EntityPlayer.removePotionEffect(BaseFearZ.Maladie.id);
 	        }
 	        
 	        return par1ItemStack;
