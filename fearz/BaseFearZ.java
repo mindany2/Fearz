@@ -59,7 +59,7 @@ public class BaseFearZ {
 	public static Item Knife = (new ItemSword(4016, KnifeMat)).setUnlocalizedName("Knife").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:Knife");
 	public static Item StonyMass = (new ItemSword(4017, StonyMassMat)).setUnlocalizedName("StonyMass").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:StonyMass");
 	public static Item CrossBow = (new ItemBow(4018)).setUnlocalizedName("CrossBow").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:CrossBow");
-	public static Item MilkBucket;
+	public static Item MilkBucket;//Pas la meilleur méthode je pense
 	
 	
 	@EventHandler 
