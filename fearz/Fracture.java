@@ -1,4 +1,4 @@
-package fearz;
+package FearZ;
 
 import net.minecraft.potion.Potion;
 import net.minecraftforge.event.entity.living.LivingFallEvent;

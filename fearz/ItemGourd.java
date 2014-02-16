@@ -1,4 +1,4 @@
-package fearz;
+package FearZ;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

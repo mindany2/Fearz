@@ -1,4 +1,4 @@
-package fearz.nourriture;
+package FearZ.nourriture;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

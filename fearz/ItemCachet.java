@@ -1,4 +1,4 @@
-package fearz;
+package FearZ;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;

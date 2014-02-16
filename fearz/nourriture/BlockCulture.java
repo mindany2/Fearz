@@ -1,4 +1,4 @@
-package fearz.nourriture;
+package FearZ.nourriture;
 
 import java.util.ArrayList;
 
