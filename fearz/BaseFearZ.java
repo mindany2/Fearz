@@ -14,6 +14,7 @@ import net.minecraft.item.ItemBucketMilk;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionAttackDamage;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent;
@@ -38,7 +39,6 @@ public class BaseFearZ {
 	public static Potion Fracture;
 	public static Potion FractureOuverte;
 	public static Potion Maladie;
-	
 	public static CreativeTabs FearzCreativeTabs = new FearzCreativeTabs(CreativeTabs.getNextID(), "FearZ");
 	static EnumToolMaterial KnifeMat = net.minecraftforge.common.EnumHelper.addToolMaterial("KnifeMat", 2, 1561, 6.0F, 2.0F, 14);
 	static EnumToolMaterial StonyMassMat = net.minecraftforge.common.EnumHelper.addToolMaterial("StonyMassMat", 2, 131, 6.0F, 1.0F, 14);
@@ -101,7 +101,8 @@ public class BaseFearZ {
     	   Item.itemsList[Item.bucketMilk.itemID] = MilkBucket;
     	Fracture = (new Fracture(32, false, 0)).setIconIndex(0, 0).setPotionName("Fracture").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2);
     	FractureOuverte = (new Fracture(33, false, 0)).setIconIndex(0, 0).setPotionName("Fracture Ouverte").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2).func_111184_a(SharedMonsterAttributes.maxHealth, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", -6.0D, 0);
-    	Maladie = (new Fracture(34, false, 0)).setIconIndex(0, 0).setPotionName("Maladie");
+    	Maladie = (new Fracture(34, false, 0)).setIconIndex(0, 0).setPotionName("Maladie").func_111184_a(SharedMonsterAttributes.attackDamage, "22653B89-116E-49DC-9B6B-9971489B5BE5", 1.0D, 0);;
+         
     }
     
     

@@ -17,6 +17,8 @@ public class ItemMorphine extends Item {
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
         par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
+        if (par3EntityPlayer.isPotionActive(BaseFearZ.Fracture)) {
+    		par3EntityPlayer.removePotionEffect(BaseFearZ.Fracture.id);}
         return par1ItemStack;
     }
 	
@@ -39,7 +41,6 @@ public class ItemMorphine extends Item {
 	        
 	        if (!par2World.isRemote)
 	        {
-	        	par3EntityPlayer.removePotionEffect(BaseFearZ.Fracture.id);
 	        }
 	        
 	        return par1ItemStack;

@@ -1,7 +1,11 @@
 package FearZ;
 
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionAttackDamage;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
@@ -15,8 +19,16 @@ public class FearZEventHooks {
 		}
 		if (event.entityLiving.isPotionActive(BaseFearZ.FractureOuverte)) {
 			event.entityLiving.addPotionEffect(new PotionEffect(BaseFearZ.FractureOuverte.id, 200000000,0));
+			
 		}
-	}
+		if (event.entityLiving.isPotionActive(BaseFearZ.Maladie)) {
+			if (event.entityLiving.getActivePotionEffect(BaseFearZ.Maladie).getDuration()==1){
+				event.entityLiving.addPotionEffect(new PotionEffect(BaseFearZ.Maladie.id, 6000,0));
+				event.entityLiving.attackEntityFrom(DamageSource.magic, 1.0F);
+					}}
+			
+		}
+	
     int a = 1;
     @ForgeSubscribe
     public void onLivingFall(LivingFallEvent event1)
