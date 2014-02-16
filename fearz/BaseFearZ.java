@@ -95,6 +95,7 @@ public class BaseFearZ {
     @EventHandler 
     public void load(FMLInitializationEvent event) 
     { 
+    	RenderingRegistry.registerEntityRenderingHandler(EntityTilesCrossbow.class, new RenderTilesCrossBow());
     	Item.itemsList[Item.bucketMilk.itemID] = null;
     	   MilkBucket = new MilkBucket(79).setUnlocalizedName("milk").setContainerItem(Item.bucketEmpty).setTextureName("bucket_milk");
     	   GameRegistry.registerItem(MilkBucket, "Milk");
