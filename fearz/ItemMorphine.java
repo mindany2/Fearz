@@ -1,4 +1,4 @@
-package fearz;
+package FearZ;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
@@ -39,7 +39,7 @@ public class ItemMorphine extends Item {
 	        
 	        if (!par2World.isRemote)
 	        {
-	            par3EntityPlayer.curePotionEffects(par1ItemStack);
+	        	par3EntityPlayer.removePotionEffect(BaseFearZ.Fracture.id);
 	        }
 	        
 	        return par1ItemStack;
