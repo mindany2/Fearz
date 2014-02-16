@@ -1,4 +1,4 @@
-package fearz;
+package FearZ;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -94,10 +94,9 @@ public class BaseFearZ {
     @EventHandler 
     public void load(FMLInitializationEvent event) 
     { 
-    	Fracture = (new Fracture(32, true, 5926017)).setIconIndex(0, 0).setPotionName("potion.Fracture").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2);
-        FractureOuverte = (new Fracture(32, false, 0)).setIconIndex(0, 0).setPotionName("Fracture Ouverte").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2).func_111184_a(SharedMonsterAttributes.maxHealth, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", -6.0D, 0);
-  
-  }
+    	Fracture = (new Fracture(32, false, 0)).setIconIndex(0, 0).setPotionName("Fracture").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2);
+    	FractureOuverte = (new Fracture(33, false, 0)).setIconIndex(0, 0).setPotionName("Fracture Ouverte").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2).func_111184_a(SharedMonsterAttributes.maxHealth, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", -6.0D, 0);
+    }
     
     
     @EventHandler 
@@ -127,3 +126,4 @@ public class BaseFearZ {
     	GameRegistry.addSmelting(BaseFearZ.FilledGourd.itemID, new ItemStack(PurifiedGourd, 1), 0.1f);
     }
 }
+
