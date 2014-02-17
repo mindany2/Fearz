@@ -43,10 +43,10 @@ public class CrossBowRenderer implements IItemRenderer {
 		case EQUIPPED:
 		{
 			GL11.glPushMatrix();
-			GL11.glRotatef(45, 0.0F, 0.0F, 1.0F);
+			GL11.glRotatef(45, 0.0F, -0.4F, 1.0F);
 			Minecraft.getMinecraft().renderEngine.bindTexture(texture);
-			GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
-			GL11.glTranslatef(0.6F, 0.0F, 0.1F);
+			GL11.glRotatef(-80.0F, 45.0F, -20.0F, 0.0F);
+			GL11.glTranslatef(0.4F, -0.5F, 0.1F);
 			model.render((Entity)data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
 			GL11.glPopMatrix(); 
 			break;
