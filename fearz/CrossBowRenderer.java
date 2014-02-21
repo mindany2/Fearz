@@ -4,6 +4,7 @@ import org.lwjgl.opengl.GL11;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
@@ -23,6 +24,8 @@ public class CrossBowRenderer implements IItemRenderer {
 		case EQUIPPED:
 			return true;
 		case EQUIPPED_FIRST_PERSON:
+			return true;
+		case ENTITY:
 			return true;
 		default:
 			return false;
@@ -63,6 +66,17 @@ public class CrossBowRenderer implements IItemRenderer {
 			GL11.glPopMatrix(); 
 			break;		
 	        }
+		case ENTITY:
+			{
+				GL11.glPushMatrix();
+				GL11.glRotatef(45, 0.0F, 0.0F, 1.0F);
+				Minecraft.getMinecraft().renderEngine.bindTexture(texture);
+				GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
+				GL11.glTranslatef(0.6F, 0.0F, 0.1F);
+				model.render((Entity)data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+				GL11.glPopMatrix(); 
+				break;		
+		        }
 		default:
 			break;
 		}
