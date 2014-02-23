@@ -46,6 +46,12 @@ public class BaseFearZ {
     {
         return (new EntityDamageSourceIndirect("tilesCrossbow", par0EntityArrow, par1Entity)).setProjectile();
     }
+	//blocks (rajouter le 23/02/2014)
+    	
+        public static Block LaveL = (new LaveL(1700, Material.iron)).setHardness(70000).setUnlocalizedName("Lave Linge").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:LaveL");
+        public static Block LaveV = (new LaveL(1701, Material.iron)).setHardness(70000).setUnlocalizedName("Lave Vaisselle").setCreativeTab(BaseFearZ.FearzCreativeTabs).setTextureName("fearz:LaveV");
+
+	
 	
 	
 	//items
@@ -108,7 +114,7 @@ public class BaseFearZ {
     	Fracture = (new Fracture(32, false, 0)).setIconIndex(0, 0).setPotionName("Fracture").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2);
     	FractureOuverte = (new Fracture(33, false, 0)).setIconIndex(0, 0).setPotionName("Fracture Ouverte").func_111184_a(SharedMonsterAttributes.movementSpeed, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.45000000596046448D, 2).func_111184_a(SharedMonsterAttributes.maxHealth, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", -6.0D, 0);
      	Maladie = (new Maladie(34, true, 0)).setIconIndex(0, 0).setPotionName("Maladie").func_111184_a(SharedMonsterAttributes.attackDamage, "22653B89-116E-49DC-9B6B-9971489B5BE5", 5.00D, 0);
-     	Degres = (new Fracture(35, true, 0)).setIconIndex(0, 0).setPotionName("Degrès");
+     	Degres = (new Fracture(35, true, 0)).setIconIndex(0, 0).setPotionName("Degrï¿½s");
              
     }
     
@@ -116,6 +122,14 @@ public class BaseFearZ {
     @EventHandler 
     public void afterLoad(FMLPostInitializationEvent event) 
     {
+    	
+    	//Block (rajouter le 23/02/2014)
+        GameRegistry.registerBlock(LaveL, "Lave linge");	
+        GameRegistry.registerBlock(LaveV, "Lave vaisselle");
+    	
+    	
+    	
+    	
     	//items
     	LanguageRegistry.addName(Cachets, "Cachets");
     	LanguageRegistry.addName(Morphine, "Morphine");
