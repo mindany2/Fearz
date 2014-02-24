@@ -176,4 +176,13 @@ public class ItemCrossBow extends Item
     {
         return this.iconArray[par1];
     }
+    
+    else if (var21.itemID == Item.swordDiamond.shiftedIndex)
+  {
+    float f4 = 0.625F;
+    GL11.glTranslatef(0.0F, 0.1875F, 0.0F);
+    GL11.glScalef(f4, -f4, f4);
+    GL11.glRotatef(-100.0F, 1.0F, 0.0F, 0.0F);
+    GL11.glRotatef(45.0F, 0.0F, 1.0F, 0.0F);
+  }    
 }
