@@ -1,0 +1,9 @@
+package Mod.FearZ.net;
+     
+    public class CommonProxy
+    {
+    public void registerRenderThings()//appelez la comme vous voulez, tant que vous l'appelez dans la méthode héritant de @PreInit
+    {
+     
+    }
+    }
